@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Conexión google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- Conexión fontawesome -->
+    <script src="https://kit.fontawesome.com/ec8793f325.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Colegio Numa</title>
+</head>
+<body>
+    <!-- Inicio de sección header - menú de navegación -->
+    <header>
+        <div class="container-logo">
+            <a href="../index.html" id="logo-flex">
+                <img id="logo" src="../images/logonuma.svg" alt="logo colegio numa">
+            </a>
+        </div>
+        <nav >
+            <ul class="nav-bar">
+                <li><a href="../index.html" id="nav-item">Inicio</a></li>
+                <li><a href="nosotros.html" id="nav-item">Nosotros</a></li>
+                <li><a href="equipo.html" id="nav-item">Equipo</a></li>
+                <li><a href="cursos.html" id="nav-item">Cursos</a></li>
+                <li><a href="contacto.html" id="nav-item">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fin de sección header - menú de navegación -->
+    <!-- Inicio de sección main -->
+    <main>
+    <!-- Inicio de sección formulario -->
+        <section class="contacto-grid">
+            <div class="heading-con">
+                <h1>Contáctanos y ubícanos</h1>
+            </div>
+            <form>
+                <div class="col">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                </div>
+                <div class="col">
+                <input type="email" id="correo" name="correo" placeholder="Correo">
+                </div>
+                <div class="col">
+                <input type="text" id="mensaje" name="mensaje" placeholder="Mensaje">
+                </div>
+                <div class="col">
+                <button type="submit" value="enviar">Enviar</button>
+                </div>
+            </form>  
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.3859742748646!2d-71.62207378499168!3d-33.04630388089161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e127f719c547%3A0x56e25c26d3c529bd!2sPlaza%20Victoria!5e0!3m2!1ses-419!2scl!4v1644061678526!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <!-- Fin de sección formulario  -->
+    </main>
+    <!-- Fin de sección main -->
+    <!-- Inicio de sección footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="foo-heading">
+                <h3>Siguenos en nuestras redes sociales</h3>
+            </div>
+            <ul class="flex-row">
+                <li id="foo">
+                    <i class="fa-brands fa-facebook-square"></i>
+                </li>
+                <li id="foo">
+                    <i class="fa-brands fa-instagram-square"></i>
+                </li>
+                <li id="foo">
+                    <i class="fa-brands fa-youtube-square"></i>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Fin de sección footer -->
+</body>
+</html>

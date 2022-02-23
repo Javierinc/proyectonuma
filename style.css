@@ -1,0 +1,579 @@
+/* Leandro utilicé el grid como dijo el profe en la clase, lo dejé para acomodar
+las cosas del main. El header y nav los hice con flex-box porque se ajustaba
+mejor al estilo que buscaba para el proyecto lo mismo para el footer */
+
+/* Configuración global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+/* Inicio de esstilos de header y menú de navegación */
+
+header {
+    background-color: #fafafa;
+    box-shadow: 0 0.125rem 1.875rem 0 rgb(12 53 115 / 10%);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.container-logo {
+    height: 5rem;
+    width: 100%;
+}
+
+#logo-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    
+}
+
+#logo-flex img {
+     width: 12rem;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover{
+    color:#F27E16;
+    
+}
+
+li {
+    padding: 0 0.625rem;
+    margin-bottom: 1rem;
+    
+}
+
+
+@media screen and (max-width: 480px) {
+  
+    .nav-bar {
+         font-size: 0.8rem;
+     }
+ }
+
+/* Fin estilos header y menú de navegación*/
+
+
+/* Estilo de los H1 del proyecto */
+h1 {
+    color: #58BDC3;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+
+
+/* Inicio desktop grid */
+
+.inicio-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 100vw ;
+    grid-template-rows: auto;
+    gap: .5rem;
+    grid-template-areas: "a1"
+                                      "a2"
+                                      "a3"
+                                      "a4"
+                                      "a5"
+                                      "a6";
+}
+
+.heading {
+    grid-area: a1;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+}
+h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+.cont-art {
+    grid-area: a3;
+    width: 80%;
+    justify-self: center;
+    align-self: initial;
+
+}
+.cont-art p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+.cont-img {
+    grid-area: a2;
+    width: 70%;
+    justify-self: center;
+}
+.cont-img img {
+    width: 100%;
+    height: 90%;
+}
+.heading-2 {
+    grid-area: a5;
+    margin-bottom: 3rem ;
+    justify-self: center;
+}
+.heading-2 h2 {
+    font-size: 1.4rem;
+}
+.cards {
+    grid-area: a6;
+}
+/* media para los textos */
+@media screen and (max-width: 640px){
+    h1 {
+        font-size:  1.5rem;
+        text-align: center;
+    }
+    .cont-art p{
+        font-size: 1rem;
+    }
+    .heading-2 h2 {
+        font-size: 1.2rem;
+    }
+
+}
+
+/* Estilo de la sección egresados */
+.cards {
+    grid-area: a6;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 21rem;
+    align-items: center;
+    margin: 0.625rem 1.25rem;
+    background-color: #1B333F;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 0.625rem 1.25rem;
+    color: #FFF;
+   
+}
+.card h3 {
+    font-size: 1.1rem;
+    margin: 0.625rem 0;
+}
+.card p {
+    margin-bottom: 0.625rem;
+}
+.card img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+/* Estilo de la sección footer */
+footer {
+    margin-top: 100px;
+    background-color: #fafafa;
+    box-shadow: 0 -5px 5px -5px rgba(51, 51, 51, 0.514);
+ }
+
+
+.foo-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.foo-heading h3 {
+    padding: 1.25rem;
+    font-size: 1.125rem;
+    color: #1B333F;
+}
+@media screen and (max-width: 640px){
+    .foo-heading h3 {
+        font-size: 0.9rem;
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    list-style: none;
+    padding: .6rem;
+
+}
+#foo {
+    cursor: pointer;
+}
+i {
+    
+    font-size: 30px;
+    color: #1b333fd3;
+}
+
+/* Estilos para nosotros */
+
+.nosotros-grid {
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas: "b1 b2"
+                                      "b3 b4"
+                                      "b5 b6";
+    justify-content: center;
+                                      
+}
+
+.cont {
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    background-color: #1B333F;
+    color:#fafafa;
+    padding: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 0.125rem 1.875rem 0 rgb(12 53 115 / 10%);
+}
+
+
+
+.container-who {
+    grid-area: b1;
+    
+}
+.container-who h2 {
+    margin-bottom: 2rem;
+}
+.image-who {
+    grid-area: b2;
+    width: 80%;
+    justify-self: center;
+}
+
+.imgs {
+    filter: drop-shadow(10px 10px 5px rgba(141, 141, 141, 0.808));
+}
+
+.container-what {
+    grid-area: b4;
+
+}
+
+.container-what h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+.image-what {
+    grid-area: b3;
+    width: 80%;
+    justify-self: center;
+}
+
+.container-where {
+    grid-area: b5;
+
+}
+.container-where h2 {
+    margin-bottom: 2rem;
+}
+.image-where {
+    grid-area: b6;
+    width: 80%;
+    justify-self: center;
+}
+
+/* media para nosotros */
+
+@media screen and (max-width: 640px) {
+    .nosotros-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "b1"
+                                          "b2"
+                                          "b3"
+                                          "b4"
+                                          "b5"
+                                          "b6";
+
+    }
+    .container-who {
+        grid-area: b1;
+    }
+    .image-who {
+        grid-area: b2;
+    }
+    .container-what {
+        grid-area: b3;
+    }
+    .image-what {
+        grid-area: b4;
+    }
+    .container-where {
+        grid-area: b5;
+    }
+    .image-where {
+        grid-area: b6;
+    }
+
+    .cont h2 {
+        font-size: 1.2rem;
+    }
+    .cont p {
+        font-size: .9rem;
+    }
+}
+
+/* Estilo sección equipo */
+ .equipo-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "c1"
+                                      "c2";
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+
+.heading-e {
+    grid-area: c1;
+    width: 80%;
+   justify-self: center;
+   text-align: center;
+   
+}
+
+.cards-e {
+    grid-area: c2;
+} 
+.card-e {
+    background-image: linear-gradient(to top, #eea849, #f46b45 ); 
+}
+
+/* Estilo para cursos */
+ .cursos-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "d1 d1 d1"
+                                      "d2 d3 d4"
+                                      "d5 d5 d5"
+                                      "d6 d7 d8"
+                                      "d9 d9 d9"
+                                      "d10 d11 d12";
+    gap: 3rem;
+}
+
+.heading-c {
+    grid-area: d1;
+    width: 80%;
+    justify-self: center;
+    text-align: center;
+}
+
+.curso {
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.curso i {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.tercer-nivel {
+    grid-area: d2;
+}
+
+.primer-nivel {
+    grid-area: d3;
+}
+
+.segundo-nivel {
+    grid-area: d4; 
+}
+
+.heading-j {
+    grid-area: d5;
+    width: 80%;
+    justify-self: center;
+    text-align: center;
+}
+
+.manana {
+    grid-area: d6;
+}
+
+.tarde {
+    grid-area: d7;
+}
+
+.noche {
+    grid-area: d8;
+}
+
+.heading-m {
+    grid-area: d9;
+    width: 80%;
+    justify-self: center;
+    text-align: center;
+}
+
+.presencial {
+    grid-area: d10;
+}
+
+.semi {
+    grid-area: d11;
+}
+
+.online {
+    grid-area: d12;
+}
+/* media para cursos */
+@media screen and (max-width: 640px){
+    .cursos-grid{
+        gap: 2rem;
+    }
+    .curso {
+        font-size: 0.7rem;
+    }
+    .curso i {
+        font-size: 2rem;
+    }
+    .titulo-cursos h1 {
+        font-size: 1.4rem;
+    }
+   .titulo h2 {
+       font-size: 1.1rem;
+   }
+   
+} 
+
+/* Estilo para contacto */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #F27E16;
+    border-radius: 0.25rem;
+  }
+  
+  button {
+    background-image: linear-gradient(to left, #58BDC3, #37b9c0);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    margin: 0.625rem;
+  }
+  
+  .col {
+    width: 100%;
+    margin: 0.625rem;
+  } 
+   button:hover {
+      background-image: linear-gradient(to left, #0F2027,#203A43,#2C5364);
+
+      }
+    
+  
+  .contacto-grid {
+      display: grid;
+      margin-top: 3rem;
+      grid-template-columns: 40vw 40vw;
+      grid-template-rows: auto;
+      grid-template-areas: "e1 e1"
+                                        "e2 e3";
+      gap: 3rem;
+      justify-content: center;
+  }
+
+  .heading-con {
+      grid-area:  e1;
+      width: 80%;
+      justify-self: center;
+      text-align: center;
+  }
+
+  form {
+      grid-area: e2;
+      width: 90%;
+  }
+
+.mapa {
+    grid-area: e3;
+    width: 100%;
+}
+iframe {
+    width: 100%;
+}
+/* media para contacto */
+@media screen and (max-width: 640px) {
+    .contacto-grid {
+        display: grid;
+        margin-top: 3rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "e1"
+                                          "e2"
+                                          "e3";
+        gap: 3rem;
+    }
+    .heading-con {
+        grid-area:  e1;
+        width: 80%;
+        justify-self: center;
+        text-align: center;
+    }
+    form {
+        grid-area: e2;
+        width: 90%;
+        justify-self: center;
+    }
+    .mapa {
+        grid-area: e3;
+        width: 80%;
+        justify-self: center;
+    }
+  
+}
