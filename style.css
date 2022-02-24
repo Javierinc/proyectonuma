@@ -1,4 +1,5 @@
 /* Configuración global */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 * {
     margin: 0;
@@ -17,63 +18,12 @@ header {
     z-index: 1030;
 }
 
-.container-logo {
-    height: 5rem;
-    width: 100%;
-}
-
-#logo-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    
-}
-
-#logo-flex img {
-     width: 12rem;
-}
-
-.nav-bar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-a:hover{
-    color:#F27E16;
-    
-}
-
-li {
-    padding: 0 0.625rem;
-    margin-bottom: 1rem;
-    
-}
-
-
-@media screen and (max-width: 480px) {
-  
-    .nav-bar {
-         font-size: 0.8rem;
-     }
- }
-
-/* Fin estilos header y menú de navegación*/
-
-
 /* Estilo de los H1 del proyecto */
 h1 {
     color: #58BDC3;
     font-weight: bold;
     font-size: 1.9rem;
 }
-
-
 
 /* Inicio desktop grid */
 
@@ -226,9 +176,12 @@ footer {
     cursor: pointer;
 }
 i {
-    
+    margin: 5px;
     font-size: 30px;
     color: #1b333fd3;
+}
+i:hover {
+    color: #37b9c0;
 }
 
 /* Estilos para nosotros */
@@ -507,18 +460,6 @@ i {
 } 
 
 /* Estilo para contacto */
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #F27E16;
-    border-radius: 0.25rem;
-  }
   
   button {
     background-image: linear-gradient(to left, #58BDC3, #37b9c0);
@@ -529,12 +470,12 @@ input {
     margin: 0.625rem;
   }
   
-  .col {
+  /* .col {
     width: 100%;
     margin: 0.625rem;
-  } 
+  }  */
    button:hover {
-      background-image: linear-gradient(to left, #0F2027,#203A43,#2C5364);
+      background-color: #62f7ff;
 
       }
     
@@ -589,7 +530,7 @@ iframe {
     }
     form {
         grid-area: e2;
-        width: 90%;
+        width: 80%;
         justify-self: center;
     }
     .mapa {
